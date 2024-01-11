@@ -89,6 +89,7 @@
   background-color: var(--dark-30);
   border-radius: 8px;
   color: #fff;
+  border: 1px solid var(--brand-color);
 }
 
 .card > span {
