@@ -46,6 +46,15 @@
     background-color: var(--dark-20);
     border: none;
     font-size: 1rem;
+    margin-left: 20px;
+    caret-color: #fff;
+    color: white;
+}
+
+.cabecalho > div > input::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    
 }
 
 .cabecalho > div > input:focus{
@@ -53,5 +62,14 @@
     outline: none;
 }
 
+.cabecalho > div > img{
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.posts{
+    background: red
+}
 
 
