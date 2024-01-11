@@ -18,7 +18,7 @@ const JordanComponent = () => {
 
     // Criar renderizador
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-    renderer.setSize(500, 300);
+    renderer.setSize(384, 200);
 
     // Adicionar modelo 3D fictício (substitua o caminho pelo seu modelo)
     const loader = new GLTFLoader();
