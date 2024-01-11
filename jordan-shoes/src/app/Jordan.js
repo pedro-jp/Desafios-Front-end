@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import styles from "./Jordan.module.css"
 
 const JordanComponent = () => {
   const canvasRef = useRef();
@@ -25,10 +26,10 @@ const JordanComponent = () => {
       scene.add(gltf.scene);
     });
 
-    const ambientLight = new THREE.AmbientLight(0xffffff); // Luz ambiente
+    const ambientLight = new THREE.AmbientLight(0xfffafa); // Luz ambiente
 
     scene.add(ambientLight);
-    scene.background = new THREE.Color(0xffffff); // Definir o fundo como branco
+    scene.background = new THREE.Color(0xF3F7FF); // Definir o fundo como branco
 
     // Adicionar controles de órbita
     const controls = new OrbitControls(camera, renderer.domElement);
@@ -55,7 +56,13 @@ const JordanComponent = () => {
     };
   }, []);
 
-  return <canvas style={{ width: '500px', height: '300px' }} ref={canvasRef} />;
-};
+  return (
+    <div className={styles.card}>
+      <canvas style={{ width: '38.5rem', height: '20rem' }} ref={canvasRef} />
+    </div>
+     
+
+  )
+ };
 
 export default JordanComponent;
