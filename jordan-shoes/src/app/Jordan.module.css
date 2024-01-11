@@ -1,3 +1,18 @@
 .card{
-  
+  font-weight: 500;
+}
+
+#descricao{
+    color: var(--dark-10);
+    font-size: 18px;
+}
+
+#nome{
+    color: var(--branch-color);
+    font-size: 16;
+}
+
+#preco{
+    color: var(--dark-10);
+    font-size: 20px;
 }

@@ -11,6 +11,8 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
 }
 
@@ -21,18 +23,65 @@
   line-height: 64px;
   font-weight: 500;
   font-size: 1.625;
+  color: black;
+  
 }
 
 .home{
   width: 100%;
-  height: 400px;
-  background: url("/imgs/image-michael-jordan.png");
+  height: 500px;
+  background: url("/imgs/image-michael-jordan.png") center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#homeDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 211px;
+  width: 500px;
+  align-self: flex-start;
+  margin: 5%;
+  line-height: 30px;
+}
+
+#homeDiv span:nth-child(1){
+display: flex;
+font-size: 18px;
+font-weight: 400;
+}
+
+#homeDiv >span:nth-child(2) > h1{
+  font-weight: 500;
+  font-size: 1.65rem;
+}
+
+#homeDiv >span:nth-child(2) > p{
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .main > canvas{
   width: 100vw;
 }
 
-.cards-section{
-  
+.main > h1, .main > p{
+  color: black
+}
+
+.cardsSection{
+  width: 90%;
+  gap: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

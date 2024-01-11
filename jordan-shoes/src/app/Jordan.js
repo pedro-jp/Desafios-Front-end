@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import styles from "./Jordan.module.css"
 
-const JordanComponent = () => {
+const JordanComponent = (props) => {
   const canvasRef = useRef();
 
   useEffect(() => {
@@ -59,6 +59,9 @@ const JordanComponent = () => {
   return (
     <div className={styles.card}>
       <canvas style={{ width: '38.5rem', height: '20rem' }} ref={canvasRef} />
+      <p id={styles.descricao}>{props.descricao}</p>
+      <p id={styles.nome}>{props.nome}</p>
+      <p id={styles.preco}>{props.preco}</p>
     </div>
      
 
