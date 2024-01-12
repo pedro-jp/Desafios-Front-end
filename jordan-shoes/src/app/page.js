@@ -28,13 +28,13 @@ export default function Home() {
       <h1>Os melhores em um só lugar</h1>
       <p>A marca Jordan na JordanShoes é a escolha certa para os amantes de sneakers que buscam estilo e conforto.</p>
       <section className={styles.cardsSection}>
-       
-      <Jordan descricao="blabla" nome="jordan" preco="1920" />
-      <Jordan descricao="blabla" nome="jordan" preco="1920" />
-      <Jordan descricao="blabla" nome="jordan" preco="1920" />
-      <Jordan descricao="blabla" nome="jordan" preco="1920" />
-      
-
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="1920" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="2480" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="900" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="1874" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="5400" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="3405.33" tenis="tenisCinco"/>
+      <Jordan descricao="Air Jordan 1 High Zoom CMFT Tropical Twist" nome="Tênis Air Jordan" preco="1200.99" tenis="tenisCinco"/>
       </section>
       
     </main>

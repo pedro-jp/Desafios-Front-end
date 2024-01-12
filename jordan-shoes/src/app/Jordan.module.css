@@ -1,18 +1,25 @@
 .card{
+    margin-top: 24px;
   font-weight: 500;
 }
 
 #descricao{
+    max-width: 300px;
     color: var(--dark-10);
     font-size: 18px;
+    margin-top: 12px;
+    text-wrap: wrap;
 }
 
 #nome{
+    margin-top: 12px;
     color: var(--branch-color);
     font-size: 16;
 }
 
 #preco{
+    margin-top: 18px;
     color: var(--dark-10);
     font-size: 20px;
 }
+

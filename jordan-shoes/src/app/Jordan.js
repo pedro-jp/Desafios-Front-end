@@ -11,29 +11,31 @@ const JordanComponent = (props) => {
   useEffect(() => {
     // Criar cena
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0xF3F7FF); // Definir o fundo como branco
 
     // Criar câmera
-    const camera = new THREE.PerspectiveCamera(75, 200 / 300, 0.1, 1000);
-    camera.position.z = 5;
+    const camera = new THREE.PerspectiveCamera(75, 500 / 300, 0.1, 1000);
+    camera.position.set(0, 1.7, 2);
 
     // Criar renderizador
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-    renderer.setSize(384, 200);
+    renderer.setSize(350, 200);
 
     // Adicionar modelo 3D fictício (substitua o caminho pelo seu modelo)
     const loader = new GLTFLoader();
-    loader.load('/air/scene.gltf', (gltf) => {
-      scene.add(gltf.scene);
+    let model;
+
+    loader.load(`/${props.tenis}/scene.gltf`, (gltf) => {
+      model = gltf.scene;
+      scene.add(model);
     });
 
-    const ambientLight = new THREE.AmbientLight(0xfffafa); // Luz ambiente
-
+    const ambientLight = new THREE.AmbientLight(0xffffff); // Luz ambiente
     scene.add(ambientLight);
-    scene.background = new THREE.Color(0xF3F7FF); // Definir o fundo como branco
 
     // Adicionar controles de órbita
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
+    controls.enableDamping = true;
     controls.dampingFactor = 0.25;
     controls.screenSpacePanning = false;
     controls.maxPolarAngle = Math.PI / 2;
@@ -44,6 +46,11 @@ const JordanComponent = (props) => {
 
       // Atualizar controles de órbita
       controls.update();
+
+      // Adicionar rotação automática ao modelo (ajuste conforme necessário)
+      if (model) {
+        model.rotation.y += 0.005;
+      }
 
       renderer.render(scene, camera);
     };
@@ -56,15 +63,24 @@ const JordanComponent = (props) => {
     };
   }, []);
 
+  const valor = Number(props.preco)
+  
+  const preco = () => {
+return valor.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  })
+}
+
   return (
     <div className={styles.card}>
-      <canvas style={{ width: '38.5rem', height: '20rem' }} ref={canvasRef} />
+      <canvas style={{ width: '250px', aspectRatio: "16/9" }} ref={canvasRef} />
       <p id={styles.descricao}>{props.descricao}</p>
       <p id={styles.nome}>{props.nome}</p>
-      <p id={styles.preco}>{props.preco}</p>
+      <p id={styles.preco}>
+      {preco()}
+    </p>
     </div>
-     
-
   )
  };
 

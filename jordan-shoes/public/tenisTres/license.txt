@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nike Dunk
+* source:	https://sketchfab.com/3d-models/nike-dunk-03dea382fa48434e9541853297a8d0cc
+* author:	LEKSA (https://sketchfab.com/LVDEV)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nike Dunk" (https://sketchfab.com/3d-models/nike-dunk-03dea382fa48434e9541853297a8d0cc) by LEKSA (https://sketchfab.com/LVDEV) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

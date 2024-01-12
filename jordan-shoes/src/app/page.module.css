@@ -47,7 +47,7 @@
   min-height: 211px;
   width: 500px;
   align-self: flex-start;
-  margin: 5%;
+  margin: 10%;
   line-height: 30px;
 }
 
@@ -72,16 +72,52 @@ font-weight: 400;
   width: 100vw;
 }
 
+.main > h1{
+  margin-top: 72px;
+}
+
+.main > p{
+  margin-top: 20px;
+  margin-bottom: 72px;
+  width: 600px;
+  text-align: center;
+  line-height: 28px;
+}
+
 .main > h1, .main > p{
   color: black
 }
 
 .cardsSection{
-  width: 90%;
+  width: 85%;
   gap: 24px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .cardsSection{
+    width: 100%;
+    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .cardsSection{
+    width: 100%;
+    gap: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
