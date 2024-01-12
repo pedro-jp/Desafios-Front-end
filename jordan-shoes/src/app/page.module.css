@@ -119,5 +119,77 @@ font-weight: 400;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+  }
+  
+  p.frase{
+    font-size: .5rem;
+    width: 5ch;
+    overflow: hidden;
+    position: relative;
+    text-wrap: nowrap;
+    animation: caracteres 8s steps(70) 1 forwards
+  }
+  
+  span.espera{
+   position: absolute;
+   bottom: 0;
+    right: -2px;
+    animation: waiting .7s 8.5s infinite
+  }
+  }
+
+
+
+  p.frase{
+  width: 5ch;
+  overflow: hidden;
+  position: relative;
+  text-wrap: nowrap;
+  animation: caracteres 4s steps(33) 1 forwards
+}
+
+span.espera{
+ position: absolute;
+ bottom: 0;
+  right: -2px;
+  color: transaparent;
+  animation: waiting .7s 3.9s 1 forwards;
+}
+
+p.fraseDois{
+  width: 0ch;
+  overflow: hidden;
+  position: relative;
+  text-wrap: nowrap;
+  animation: caracteresDois 4s 4.1s steps(37) 1 forwards
+}
+
+span.esperaDois{
+ position: absolute;
+ bottom: 0;
+  right: -3px;
+  animation: waiting .8s forwards infinite;
+}
+
+@keyframes waiting{
+
+  from{
+    color: white;
+  }
+  to{
+    color: transparent;
+  }
+}
+
+@keyframes caracteres {
+  to{
+    width: 33ch;
+  }
+}
+
+@keyframes caracteresDois {
+  to{
+    width: 37ch;
   }
 }

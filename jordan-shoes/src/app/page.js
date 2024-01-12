@@ -18,9 +18,7 @@ export default function Home() {
         </span>
           <span>
             <h1>A melhor loja de Jordan</h1>
-            <p>
-            O tênis Jordan é fruto de uma velha e forte parceria entre a Nike e o jogador Michael Jordan.|
-            </p>
+            <p className={styles.frase}>O tênis Jordan é fruto de uma velha e forte<span className={styles.espera}>|</span></p> <p className={styles.fraseDois}>parceria entre a Nike e o jogador Michael Jordan.<span className={styles.esperaDois}>|</span></p>
           </span>
         </div>
         </section>  
