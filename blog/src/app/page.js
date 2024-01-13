@@ -4,39 +4,6 @@ import styles from "./page.module.css";
 import Card from "./Card";
 
 export default function Home() {
-  function formatarData(data) {
-    const meses = [
-      "jan",
-      "fev",
-      "mar",
-      "abr",
-      "mai",
-      "jun",
-      "jul",
-      "ago",
-      "set",
-      "out",
-      "nov",
-      "dez",
-    ];
-
-    const dia = data.getDate();
-    const mes = meses[data.getMonth()];
-    const ano = data.getFullYear();
-
-    return `${dia} de ${mes}, ${ano}`;
-  }
-
-  // Exemplo de uso:
-  const dataAtual = new Date();
-  const dataFormatada = formatarData(dataAtual);
-
-  const [classe, setClasse] = useState(styles.notClicked);
-
-  const handleClick = () => {
-    // Atualiza o estado com a nova classe
-    setClasse(styles.clicked);
-  }
 
   return (
     <main className={styles.main}>
