@@ -1,10 +1,18 @@
 'use client';
 import styles from './page.module.css'
 import Jordan from "./Jordan"
+import Head from 'next/head';
 
 export default function Home() {
   return (
     <main className={styles.main}>
+       <Head>     
+        <meta property="og:title" content="Jordan Shoes Store" />
+        <meta property="og:description" content="Jordan Shoes Store" />
+        <meta property="og:image" content="https://forbes.com.br/wp-content/uploads/2020/08/Colunas_AirJordan1Leil%C3%A3o_140820_Getty-768x512.jpg" />
+        <meta property="og:url" content="https://desafios-front-end-jordan-shoes.vercel.app/" />
+        <meta property="og:type" content="website" />
+      </Head>
       <section className={styles.cabecalho}>
         <span><h3>Frete grátis para todo o Brasil</h3></span>
         <section className={styles.home}>
