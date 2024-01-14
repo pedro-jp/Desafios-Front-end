@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500;600;700;800&family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+ --branch-color: #F1A5B1;
+ --dark-10: #0B0A0A;
+ --dark-20: #FFFFFF
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  transition: .3s
+}
+
+body {
+  background-color: var(--branch-color);
+}
