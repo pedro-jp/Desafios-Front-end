@@ -1,0 +1,109 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: #101010;
+  color: #ffffff;
+  display: grid;
+  place-content: center;
+}
+
+.form {
+  width: 300px;
+  height: 400px;
+  background: #ffffff05;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0 white;
+  position: relative;
+  z-index: 2;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form input {
+  height: 50px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background: #21202050;
+  padding: 10px;
+  z-index: 2;
+  color: white
+}
+
+.form input[type="submit"] {
+  background: #ffffff20;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.form:hover input[type="submit"] {
+  background: linear-gradient(45deg, red, yellow);
+  color: #ffffff;
+  
+}
+
+.form a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.form::after {
+  content: "";
+  width: 350px;
+  height: 450px;
+  border: 1px solid #ffffff;
+  padding: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 45% 84% 34% 71% / 83% 54% 45% 42%;
+  z-index: 1;
+}
+.form::before {
+  content: "";
+  width: 350px;
+  height: 450px;
+  border: 1px solid #ffffff;
+  padding: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  z-index: 0;
+  border-radius: 80% 64% 86% 85% / 53% 44% 85% 82%;
+}
+
+.form:hover::before {
+  animation: rotacao 50s infinite;
+  box-shadow: 0 0 20px 0px red;
+  border: 5px solid red
+}
+
+.form:hover::after {
+  animation: contraRotacao 50s infinite;
+  box-shadow: 0 0 20px 0px yellow;
+  border: 5px solid yellow
+}
+
+@keyframes rotacao {
+  100% {
+    transform: translate(-50%, -50%) rotate(calc(360deg * 10));
+  }
+}
+
+@keyframes contraRotacao {
+   100% {
+    transform: translate(-50%, -50%) rotate(calc(-360deg * 10));
+  }
+}

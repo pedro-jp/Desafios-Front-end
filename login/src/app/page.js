@@ -24,8 +24,28 @@ export default function Home() {
           placeholder="Exemplo1928"
         />
 
-        <label for="lembre">lembre</label>
-        <input type="checkbox" name="lembre" id="lembre" />
+        <div className={styles.esqueceu}>
+          <div>
+            <input type="checkbox" name="lembre" id="lembre" />
+            <label for="lembre">Lembre de mim</label>
+          </div>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+
+        <div className={styles.conta}>
+          <input type="button" name="lembre" id="entrar" value={"Entrar"} />
+
+          <input
+            type="button"
+            name="google"
+            id="google"
+            value={"Ou faca login com o Google"}
+          />
+        </div>
+
+        <div className={styles.naoTemConta}>
+          <p>Não tem uma conta? <a href='#'>Cadastre-se</a></p>
+        </div>
       </form>
     </main>
   );
