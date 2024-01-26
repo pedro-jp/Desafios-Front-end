@@ -18,18 +18,47 @@
 }
 
 .sites {
-  scale: 0;
   position: absolute;
   height: 768px;
   width: max-content;
   transform: scale(0.5);
   transform-origin: top left;
+  transition: scale 0.3s;
 }
 
 .sites svg {
   height: 100%;
 }
 
+.sites span {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(95, 95, 95);
+  position: absolute;
+  bottom: 20px;
+  right: calc(50% - 20px);
+  transition: all 0.3s;
+  animation: btn 3s 3s infinite forwards;
+} 
+
+.sites span:hover{
+  animation: none;
+    scale: .9; 
+  }
+
+  @keyframes btn {
+    0%{
+      scale: 1;
+    }
+    50%{
+      scale: .9;
+    }
+    100%{
+      scale: 1;
+    }
+  }
+  
 .frame {
   position: absolute;
   inset: 50%;
