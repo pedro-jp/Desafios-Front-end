@@ -1,0 +1,40 @@
+.projetos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.siteContainer {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+}
+
+.siteContainer:has(h2:hover) .sites {
+  scale: 1;
+}
+
+.sites {
+  scale: 0;
+  position: absolute;
+  height: 768px;
+  width: max-content;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+
+.sites svg {
+  height: 100%;
+}
+
+.frame {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+  width: 51%;
+  height: 83%;
+  border: none;
+}
