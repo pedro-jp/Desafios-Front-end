@@ -4,19 +4,19 @@ const Navbar = () => {
     return(
         <nav className={styles.navbar}>
             <ul>
-                <li>um</li>
+                <li><a href="">Pedro<span>Dev</span></a></li>
                 <li>
                     <ul>
-                        <li>Um</li>
-                        <li>Dois</li>
-                        <li>tres</li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">Projetos</a></li>
                     </ul>
                 </li>
                 <li>
                 <ul>
-                        <li>um</li>
-                        <li>dois</li>
-                        <li>tres</li>
+                        <li><a href="">LinkedIn</a></li>
+                        <li><a href="">Github</a></li>
+                        <li>Fale comigo</li>
                     </ul>
                 </li>
             </ul>
