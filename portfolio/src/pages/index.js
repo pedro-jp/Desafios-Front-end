@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Projetos from "./components/projetos/Projetos";
+import Hero from "./components/hero/Hero";
+import Navbar from "./components/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +44,9 @@ export default function Home() {
           content="https://pedro-dev-port.vercel.app/assets/perfil.jpg"
         />
       </Head>
+      <Navbar />
       <main className={styles.main}>
+        <Hero />
         <Projetos />
       </main>
     </>
