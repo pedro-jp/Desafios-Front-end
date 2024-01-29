@@ -1,4 +1,9 @@
 :root {
+  --primary-color: #70FF00;
+  --dark-10: #161616;
+  --dark-20: #222222;
+  --darj-30: #4F4F4F;
+  --dark-40: #828282;
 }
 * {
   margin: 0;
