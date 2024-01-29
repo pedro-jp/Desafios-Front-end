@@ -2,7 +2,7 @@
   --primary-color: #70FF00;
   --dark-10: #161616;
   --dark-20: #222222;
-  --darj-30: #4F4F4F;
+  --dark-30: #4F4F4F;
   --dark-40: #828282;
 }
 * {
@@ -16,4 +16,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background: linear-gradient(to right, var(--dark-10), var(--dark-30));
+  color: #fff;
 }
