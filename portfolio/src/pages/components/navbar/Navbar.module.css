@@ -1,6 +1,8 @@
 .navbar{
     width: 100vw;
-    
+    margin-bottom: 44px;
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar ul{
@@ -17,11 +19,44 @@
     text-decoration: none;
     color: #fff;
 }
-.navbar > ul > li:nth-child(1){
+
+.navbar > ul > li:nth-child(1) a{
     color: var(--dark-40);
     text-transform: uppercase;
 }
 
 .navbar > ul > li:nth-child(1) span{
     color: #fff;
+}
+
+.navbar #contato{
+    width: max-content;
+    margin-left: 0px;
+    padding: 0 24px 48px 24px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+
+.navbar #contato:hover{
+    background: var(--dark-20);
+    padding: 0 24px 48px 24px;
+}
+
+.navbar #contato span{
+    position: absolute;
+    display: none;
+}
+
+.navbar #contato span{
+    bottom: 1.75rem;
+   }
+
+.navbar #contato span:last-child{
+    bottom: .5rem;
+   }
+
+.navbar #contato:hover span{
+    display: inherit;
 }
