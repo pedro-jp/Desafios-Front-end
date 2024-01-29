@@ -28,7 +28,7 @@ const Projetos = () => {
         <div className={styles.siteContainer} key={index}>
           <h2>
             {projeto.nome}
-
+          </h2>
             <div className={styles.sites}>
               <svg
                 className={styles.svgdiv}
@@ -57,7 +57,7 @@ const Projetos = () => {
                 <span></span>
               </a>
             </div>
-          </h2>
+          
         </div>
       ))}
     </section>

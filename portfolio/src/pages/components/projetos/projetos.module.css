@@ -1,9 +1,12 @@
 .projetos {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 30px;
+  justify-content: center;
+  gap: 32px;
+
 }
 
 .siteContainer {
@@ -11,10 +14,12 @@
   height: 400px;
   width: 400px;
   text-align: center;
+
 }
 
 .siteContainer:has(h2:hover) .sites {
-  scale: 1;
+  display: inherit;
+  
 }
 
 .sites {
@@ -23,7 +28,7 @@
   width: max-content;
   transform: scale(0.5);
   transform-origin: top left;
-  transition: scale 0.3s;
+
 }
 
 .sites svg {
