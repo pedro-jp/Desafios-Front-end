@@ -21,7 +21,7 @@ export default function Home() {
         <meta property="og:title" content="Pedro | Dev" />
         <meta
           property="og:description"
-          content="Portfólio pessoal do deselvolvedor João Pedro"
+          content="Portfólio pessoal do desenvolvedor João Pedro"
         />
         <meta
           property="og:image"
