@@ -32,7 +32,7 @@ export default function Home() {
 
         <meta
           property="twitter:url"
-          content="https://pedro-dev-port.vercel.app/"
+          content="https://dev-pedro-portfolio.vercel.app/"
         />
         <meta property="twitter:title" content="Pedro | Dev" />
         <meta
@@ -41,7 +41,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://pedro-dev-port.vercel.app/assets/perfil.jpg"
+          content="https://dev-pedro-portfolio.vercel.app/assets/perfil.jpg"
         />
       </Head>
       <Navbar />
