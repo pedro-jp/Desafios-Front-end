@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pedro-dev-port.vercel.app/" />
+        <meta property="og:url" content="https://dev-pedro-portfolio.vercel.app/" />
         <meta property="og:title" content="Pedro | Dev" />
         <meta
           property="og:description"
