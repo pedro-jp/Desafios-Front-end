@@ -27,7 +27,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://pedro-dev-port.vercel.app/assets/perfil.jpg"
+          content="https://dev-pedro-portfolio.vercel.app/assets/perfil.jpg"
         />
 
         <meta
