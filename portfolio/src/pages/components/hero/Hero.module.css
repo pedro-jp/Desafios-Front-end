@@ -1,3 +1,52 @@
 .hero {
-    color: red
+  margin-top: 100px;
+  padding: 5%;
+  width: 100%;
+}
+
+.hero h1 {
+  letter-spacing: 4px;
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+.hero > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.xp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--dark-40);
+}
+
+.xp span:nth-child(1) {
+  font-size: 3rem;
+}
+
+.xp div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.photo {
+  height: 300px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--dark-40), var(--dark-20));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 100px;
+  height: 100px;
 }
