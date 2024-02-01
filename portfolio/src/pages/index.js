@@ -27,7 +27,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://dev-pedro-portfolio.vercel.app/assets/perfil.jpg"
+          content="https://dev-pedro-portfolio.vercel.app/assets/perfil-disney.png"
         />
 
         <meta
@@ -41,7 +41,7 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://dev-pedro-portfolio.vercel.app/assets/perfil.jpg"
+          content="https://dev-pedro-portfolio.vercel.app/assets/perfil-disney.png"
         />
       </Head>
       <Navbar />
