@@ -10,7 +10,7 @@
 }
 
 @keyframes navbar {
-    to{background-color: var(--dark-20);}
+    to{background-color: var(--dark-30);}
 }
 
 #hamburguer {
@@ -106,7 +106,7 @@
     display: inherit;
 }
 
-@media screen and (max-width: 768px) and (orientation: portrait){
+@media screen and (max-width: 768px){
     .navbar{
         height: 100dvh;
         background: var(--dark-20);
