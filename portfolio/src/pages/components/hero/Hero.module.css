@@ -1,12 +1,13 @@
 .hero {
-  margin-top: 100px;
+  margin-top: 0px;
   padding: 5%;
   width: 80%;
+  margin-top: 80px;
 }
 
 .hero h1 {
   letter-spacing: 4px;
-  background: linear-gradient(to right, #C60AE7, #012AFF);
+  background: linear-gradient(to right, #c60ae7, #012aff);
   background-clip: text;
   color: transparent;
   font-size: 3rem;
@@ -38,7 +39,6 @@
   align-items: center;
   gap: 8px;
   margin-left: 20px;
-
 }
 
 .photo {
@@ -57,75 +57,58 @@
   height: 100px;
 }
 
-.photo span.sphere{
+.photo span.sphere {
   position: absolute;
   height: 15px;
   aspect-ratio: 1;
-  background: linear-gradient( 70deg, var(--dark-20), var(--dark-40));
+  background: linear-gradient(70deg, var(--dark-20), var(--dark-40));
   inset: 5%;
   border-radius: 50%;
 }
 
-.photo span.sphere:nth-child(2){
-  height: 10px;;
-  background: linear-gradient( 70deg, var(--dark-10), var(--dark-40));
+.photo span.sphere:nth-child(2) {
+  height: 10px;
+  background: linear-gradient(70deg, var(--dark-10), var(--dark-40));
   inset: 80% 100%;
 }
 
-span:has(img.icons){
+span:has(img.icons) {
   position: absolute;
   background: linear-gradient(130deg, var(--dark-10), var(--dark-40));
   padding: 10px;
   height: max-content;
   width: max-content;
   border-radius: 50%;
-  transition: all .5s;
+  transition: all 0.5s;
   display: grid;
   align-content: center;
   z-index: 1;
 }
 
-span:has(img.icons):nth-child(5){
+span:has(img.icons):nth-child(5) {
   inset: 10% 80%;
   animation: tech 1s 0s infinite linear forwards;
 }
 
-span:has(img.icons):nth-child(4){
+span:has(img.icons):nth-child(4) {
   inset: 78% 65%;
   padding: 15px;
 }
 
-
-@keyframes icon-rotate {
-  to{
-    transform: rotate(360deg)
-  }
-}
-
-@keyframes tech {
-  0%{background: linear-gradient(0deg, var(--dark-10), var(--dark-40));}
-  50%{background: linear-gradient(360deg, var(--dark-10), var(--dark-40));}
-  100%{background: linear-gradient(0deg, var(--dark-10), var(--dark-40));}
-}
-
-span:has(img.icons):nth-child(3){
+span:has(img.icons):nth-child(3) {
   inset: 65% 0%;
 }
 
-.sobre{
+.sobre {
   width: 100%;
 }
 
 @media screen and (max-width: 992px) {
-  .hero{
-    width: 100%;
-  }}
-
-@media screen and (max-width: 768px) {
-  .hero{
+  .hero {
     width: 100%;
   }
-  .photo{
+
+  .photo {
     margin: 0px auto;
   }
 }

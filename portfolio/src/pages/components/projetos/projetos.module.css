@@ -73,8 +73,9 @@
   background: #fff;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1080px){
   .projetos{
     width: 100%
   }
 }
+
