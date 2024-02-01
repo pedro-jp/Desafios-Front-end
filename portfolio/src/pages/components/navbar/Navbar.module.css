@@ -7,6 +7,7 @@
     animation: navbar 1s;
     animation-timeline: scroll();
     animation-range-start: view;
+    z-index: 10;
 }
 
 @keyframes navbar {

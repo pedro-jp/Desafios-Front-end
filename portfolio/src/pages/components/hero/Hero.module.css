@@ -1,7 +1,7 @@
 .hero {
   margin-top: 100px;
   padding: 5%;
-  width: 100%;
+  width: 80%;
 }
 
 .hero h1 {
@@ -26,6 +26,7 @@
   gap: 8px;
   margin-top: 20px;
   color: var(--dark-40);
+  margin-bottom: 40px;
 }
 
 .xp span:nth-child(1) {
@@ -37,6 +38,7 @@
   align-items: center;
   gap: 8px;
   margin-left: 20px;
+
 }
 
 .photo {
@@ -114,8 +116,16 @@ span:has(img.icons):nth-child(3){
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  .hero{
+    width: 100%;
+  }}
+
 @media screen and (max-width: 768px) {
+  .hero{
+    width: 100%;
+  }
   .photo{
-    margin: 40px auto;
+    margin: 0px auto;
   }
 }
