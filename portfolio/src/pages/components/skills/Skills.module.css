@@ -1,6 +1,6 @@
 .skills{
     width: 100%;
-    background: linear-gradient(to right, var(--dark-10), --dark-30);
+    background: var(--dark-10);
     padding: 5% 15%;
 }
 
