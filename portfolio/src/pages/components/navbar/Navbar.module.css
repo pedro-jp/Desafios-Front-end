@@ -53,9 +53,7 @@
 }
 
 .navbar a:hover {
-  background: var(--primary-color);
-  background-clip: text;
-  color: transparent;
+  color: var(--primary-color);
 }
 
 .navbar > ul > li:nth-child(1) a {
