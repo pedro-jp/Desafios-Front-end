@@ -47,7 +47,7 @@
 .about div:nth-child(2) div {
     height: 100px;
     width: 100%;
-    background: linear-gradient(to right, var(--dark-10), var(--dark-30));
+    background: linear-gradient(to right, var(--dark-30), var(--dark-20));
     border-radius: 16px;
     display: flex;
     flex-direction: column;
