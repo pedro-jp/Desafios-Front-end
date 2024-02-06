@@ -5,6 +5,7 @@ import Projetos from "./components/projetos/Projetos";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
 import About from "./components/about/About"
+import Skills from "./components/skills/Skills"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ export default function Home() {
       <main className={styles.main}>
         <Hero />
         <About />
+        <Skills />
         <Projetos />
       </main>
     </>
