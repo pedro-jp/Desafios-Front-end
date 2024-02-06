@@ -26,7 +26,7 @@
   position: inherit;
   height: 5px;
   width: 40px;
-  background-color: #fff;
+  background-color: var(--dark-40);
 }
 
 #dois {
@@ -53,7 +53,7 @@
 }
 
 .navbar a:hover {
-  background: linear-gradient(to right, #c60ae7, #012aff);
+  background: var(--primary-color);
   background-clip: text;
   color: transparent;
 }
@@ -118,7 +118,7 @@
     width: 50vw;
     left: -50%;
     transition: all 0.3s;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .navbar:hover {
