@@ -1,0 +1,94 @@
+.skills{
+    width: 100%;
+    background: linear-gradient(to right, var(--dark-10), --dark-30);
+    padding: 5% 15%;
+}
+
+.skills h2{
+    color: var(--primary-color);
+}
+
+.skills h2 > span{
+    color: #fff;
+}
+
+.container_svg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.first_svg_line{ 
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+    animation: svg_translate_inverse 10s 0s infinite backwards
+}
+
+.second_svg_line{
+    width: 100vw;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 40px;
+    animation: svg_translate 10s 0s infinite backwards
+}
+
+/* .first_svg_line:hover, .second_svg_line:hover{
+    animation-play-state: paused;
+    overflow-x: scroll;
+}
+
+.first_svg_line::-webkit-scrollbar, .second_svg_line::-webkit-scrollbar{
+    display: none;
+} */
+
+.skills img{
+    width: 50px;
+    aspect-ratio: 1;
+}
+
+@keyframes svg_translate{
+    0%{transform: translateX(0%);}
+    50%{transform: translateX(25%);}
+    100%{transform: translateX(0%);}
+}
+
+@keyframes svg_translate_inverse{
+    0%{transform: translateX(0%);}
+    50%{transform: translateX(-25%);}
+    100%{transform: translateX(0%);}
+}
+
+@media screen and (max-width: 992px) {
+
+    .skills{
+        width: 100%;
+        padding: 5%;
+    }
+
+    .first_svg_line{
+        animation: svg_translate_inverse 30s 0s infinite backwards
+    }
+    
+    .second_svg_line{
+        animation: svg_translate 30s 0s infinite backwards
+    }
+    
+    @keyframes svg_translate{
+        0%{transform: translateX(0%);}
+        50%{transform: translateX(300%)}
+        100%{transform: translateX(0%);}
+    }
+    
+    @keyframes svg_translate_inverse{
+        0%{transform: translateX(0%);}
+        50%{transform: translateX(-300%);}
+        100%{transform: translateX(0%);}
+    }
+}
