@@ -1,3 +1,10 @@
+#projeto_h2{
+  color: var(--primary-color);
+}
+
+#projeto_h2 span{
+  color:#fff;
+}
 .projetos {
   width: 80%;
   display: flex;
@@ -6,6 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: 32px;
+  margin-bottom: 40px;
 
 }
 
@@ -14,6 +22,7 @@
   height: 400px;
   width: 400px;
   text-align: center;
+  margin-top: 40px;
 }
 
 .siteContainer:has(h2:hover) .sites {
