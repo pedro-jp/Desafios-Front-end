@@ -32,7 +32,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          content="https://dev-pedro-portfolio.vercel.app/assets/perfil-disney.png"
         />
 
         <meta
