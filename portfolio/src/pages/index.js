@@ -42,7 +42,7 @@ export default function Home() {
         <meta property="twitter:title" content="Pedro | Dev" />
         <meta
           property="twitter:description"
-          content="Portfólio pessoal do deselvolvedor João Pedro"
+          content="Portfólio pessoal do desenvolvedor João Pedro"
         />
         <meta
           property="twitter:image"

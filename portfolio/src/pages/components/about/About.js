@@ -7,19 +7,29 @@ function About() {
                 <h2>
                     sobreMim<span>( )</span>
                 </h2>
+
+                <br />
+
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse placerat cursus urna a consectetur. Vestibulum sit amet ex vehicula, efficitur odio non, mollis orci. Mauris pretium volutpat odio, id egestas quam porta eu. Mauris pharetra neque ac eleifend volutpat. Proin id imperdiet neque. Mauris viverra pulvinar orci at sodales. Vivamus leo augue, convallis nec lorem sit amet, porta molestie arcu. Etiam feugiat nibh eu lacinia pretium. Cras vitae tincidunt dolor, id efficitur lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc tincidunt turpis vitae risus imperdiet condimentum.
+                E aí, galera! Sou o João Pedro, entrei no mundo da programação lá em 2019 com o Portugol e, desde então, não parei mais. Em 2020, dei um salto e entrei no curso de Análise e Desenvolvimento de Sistemas na Etec de Taboão da Serra, saindo de lá em 2022 com a bagagem cheia de conhecimento. <br /> <br />
+                </p>
+                <p>
+                No ano passado (2023), me joguei de cabeça em React, MySQL, JavaScript e CSS,  foram muitos aprendizados. Agora tô começando o curso de Engenharia da Computação, prontíssimo pra mais desafios e conhecimentos.
+                </p> <br />
+                <p>
+                Abraços, <br />
+João Pedro
                 </p>
             </div>
 
             <div>
-                <div>
+                <div className={styles.fullstack}>
                     <div>
                         <h2>Fullstack Developer</h2><span><h2>{"</>"}</h2></span>
                     </div>
                     <a href="https://github.com/pedro-jp">Projetos</a>
                 </div>
-                <div>
+                <div className={styles.fullstack}>
                     <div>
                         <h2>Freelancer</h2><span><h2>{"{ }"}</h2></span>
                     </div>
