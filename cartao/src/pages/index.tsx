@@ -63,6 +63,34 @@ export default function Home() {
 }
 `;
 
+function enviar(){
+  const myHeaders = new Headers();
+myHeaders.append("Authorization", "App 5d7dec559ff47d95cc42ae8392b355fd-a2159586-32be-4053-ac9e-4edf4d1a59fb");
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Accept", "application/json");
+
+const raw = JSON.stringify({
+    "messages": [
+        {
+            "destinations": [{"to":"5511937219384"}],
+            "from": "ServiceSMS",
+            "text": `Olá, o seu cartão ${inputValue} foi cadastrado com sucesso!`
+        }
+    ]
+});
+
+const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow"
+};
+
+fetch("https://2vg3p6.api.infobip.com/sms/2/text/advanced", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));}
+
   return (
     <>
       <Head>
@@ -131,6 +159,8 @@ export default function Home() {
           onChange={handleInputChange}
           placeholder="Digite um valor"
         />
+
+        <button onClick={enviar} >Cadastrar cartão</button>
       </main>
     </>
   );
