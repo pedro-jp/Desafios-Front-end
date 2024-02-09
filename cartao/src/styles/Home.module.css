@@ -1,0 +1,45 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.cartao{
+  background-color: #fff;
+  width: 200px;
+  aspect-ratio: 2/1.2;
+  border-radius: 16px;
+  scale: 2;
+  display: flex;
+  margin: 0;
+  gap: 1px;
+
+}
+.change_digit_container{
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.change_digit{
+position: absolute;
+inset: 0;
+animation: changeDigit .5s 0s 1;
+}
+
+.change_digit::before{
+  content: "*";
+  position: absolute;
+  inset: 1rem 0;
+  }
+
+@keyframes changeDigit{
+  to{
+    transform: translateY(-1rem);
+  }
+}
