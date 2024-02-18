@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Projetos from "./components/projetos/Projetos";
 import Hero from "./components/hero/Hero";
@@ -7,7 +7,10 @@ import Navbar from "./components/navbar/Navbar";
 import About from "./components/about/About"
 import Skills from "./components/skills/Skills"
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
