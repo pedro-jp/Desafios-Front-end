@@ -27,18 +27,18 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a href="">LinkedIn</a>
+              <a target="_blank" href="https://linkedin.com/in/pedro-jp">LinkedIn</a>
             </li>
             <li>
-              <a href="">Github</a>
+              <a target="_blank" href="https://github.com/pedro-jp">Github</a>
             </li>
             <li id={styles.contato}>
               Fale comigo
               <span>
-                <a href="">Whatsapp</a>
+                <a target="_blank" href=" https://wa.me/+5511937219384/?Ol%C3%A1%2C+passei+pelo+seu+portf%C3%B3lio.">Whatsapp</a>
               </span>
               <span>
-                <a href="">E-mail</a>
+                <a target="_blank" href="mailto:joaopedroc035@gmail.com">E-mail</a>
               </span>
             </li>
           </ul>
