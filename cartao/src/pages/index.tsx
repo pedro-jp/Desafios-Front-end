@@ -8,39 +8,106 @@ import styled from "styled-components";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
 
-  let d0: string = inputValue[0] || '*';
-  let d1: string = inputValue[1] || '*';
-  let d2: string = inputValue[2] || '*';
-  let d3: string = inputValue[3] || '*';
-  let d4: string = inputValue[4] || '*';
-  let d5: string = inputValue[5] || '*';
-  let d6: string = inputValue[6] || '*';
-  let d7: string = inputValue[7] || '*';
-  let d8: string = inputValue[8] || '*';
-  let d9: string = inputValue[9] || '*';
-  let d10: string = inputValue[10] || '*';
-  let d11: string = inputValue[11] || '*';
-  let d12: string = inputValue[12] || '*';
-  let d13: string = inputValue[13] || '*';
-  let d14: string = inputValue[14] || '*';
-  let d15: string = inputValue[15] || '*';
+  const digits: { digito: string|number }[] = [
+    {
+      digito: inputValue[0] || "*"
+    },
+
+    {
+      digito: inputValue[1] || "*"
+    },
+
+    {
+      digito: inputValue[2] || "*"
+    },
+
+    {
+      digito: inputValue[3] || "*"
+    },
+
+    {
+      digito: inputValue[4] || "*"
+    },
+
+    {
+      digito: inputValue[5] || "*"
+    },
+
+    {
+      digito: inputValue[6] || "*"
+    },
+
+    {
+      digito: inputValue[7] || "*"
+    },
+
+    {
+      digito: inputValue[8] || "*"
+    },
+
+    {
+      digito: inputValue[9] || "*"
+    },
+
+    {
+      digito: inputValue[10] || "*"
+    },
+
+    {
+      digito: inputValue[11] || "*"
+    },
+
+    {
+      digito: inputValue[12] || "*"
+    },
+
+    {
+      digito: inputValue[13] || "*"
+    },
+
+    {
+      digito: inputValue[14] || "*"
+    },
+
+    {
+      digito: inputValue[15] || "*"
+    }
+  ];
+  
+
+  let d0: string = inputValue[0] || "*";
+  let d1: string = inputValue[1] || "*";
+  let d2: string = inputValue[2] || "*";
+  let d3: string = inputValue[3] || "*";
+  let d4: string = inputValue[4] || "*";
+  let d5: string = inputValue[5] || "*";
+  let d6: string = inputValue[6] || "*";
+  let d7: string = inputValue[7] || "*";
+  let d8: string = inputValue[8] || "*";
+  let d9: string = inputValue[9] || "*";
+  let d10: string = inputValue[10] || "*";
+  let d11: string = inputValue[11] || "*";
+  let d12: string = inputValue[12] || "*";
+  let d13: string = inputValue[13] || "*";
+  let d14: string = inputValue[14] || "*";
+  let d15: string = inputValue[15] || "*";
 
   let cor: string = "blue";
 
   switch (d0) {
     case "N":
-      cor = '*';
+      cor = "*";
       break;
     case "1":
       cor = "red";
       break;
-    case '2':
+    case "2":
       cor = "blue";
       break;
     case "3":
@@ -53,43 +120,37 @@ export default function Home() {
       break;
   }
 
-  const FirstDigit = styled.span`
-  position: relative;
+  function enviar() {
+    const myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      "App 5d7dec559ff47d95cc42ae8392b355fd-a2159586-32be-4053-ac9e-4edf4d1a59fb"
+    );
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Accept", "application/json");
 
-&::before {
-  content: '${props => props.content || "*"}'; // props.content contém o valor de d0
-  position: absolute;
-  inset: 1rem 0;
-}
-`;
-
-function enviar(){
-  const myHeaders = new Headers();
-myHeaders.append("Authorization", "App 5d7dec559ff47d95cc42ae8392b355fd-a2159586-32be-4053-ac9e-4edf4d1a59fb");
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Accept", "application/json");
-
-const raw = JSON.stringify({
-    "messages": [
+    const raw = JSON.stringify({
+      messages: [
         {
-            "destinations": [{"to":"5511937219384"}],
-            "from": "ServiceSMS",
-            "text": `Olá, o seu cartão ${inputValue} foi cadastrado com sucesso!`
-        }
-    ]
-});
+          destinations: [{ to: "5511937219384" }],
+          from: "ServiceSMS",
+          text: `Olá, o seu cartão ${inputValue} foi cadastrado com sucesso!`,
+        },
+      ],
+    });
 
-const requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow"
-};
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
 
-fetch("https://2vg3p6.api.infobip.com/sms/2/text/advanced", requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.error(error));}
+    fetch("https://2vg3p6.api.infobip.com/sms/2/text/advanced", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.error(error));
+  }
 
   return (
     <>
@@ -101,55 +162,100 @@ fetch("https://2vg3p6.api.infobip.com/sms/2/text/advanced", requestOptions)
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div style={{ backgroundColor: cor }} className={styles.cartao}>
+          
+          <div className={styles.digit_group}>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d0) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d0}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d1) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d1}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d2) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d2}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d3) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d3}</span>
+              </span>
+            </span>
+          </div>
 
-          <span className={styles.change_digit_container}> <FirstDigit >
-              {d0 ? d0 : "*"}</FirstDigit></span>
-          <span className={styles.change_digit_container}> <span className={Number(d1) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d2) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d3) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span>
-          <span className={styles.change_digit_container}> <span className={Number(d4) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d5) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d6) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d7) < 10 ? styles.change_digit : ""}>*</span> </span>
+          <div className={styles.digit_group}>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d4) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d4}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d5) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d5}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d6) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d6}</span>
+              </span>
+            </span>
+            
+            <span className={styles.change_digit_container}>
+              <span className={Number(d7) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d7}</span>
+              </span>
+            </span>
+          </div>
 
-          <span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span>
-          <span>
-            {" "}
-          </span>
-          <span className={styles.change_digit_container}> <span className={Number(d8) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d9) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d10) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d11) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span><span>
-            {" "}
-          </span>
-          <span className={styles.change_digit_container}> <span className={Number(d12) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d13) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d14) < 10 ? styles.change_digit : ""}>*</span> </span>
-          <span className={styles.change_digit_container}> <span className={Number(d15) < 10 ? styles.change_digit : ""}>{d15 ? d15 : "*"}</span></span>
+          <div className={styles.digit_group}>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d8) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d8}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d9) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d9}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d10) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d10}</span>
+              </span>
+            </span>
+
+            <span className={styles.change_digit_container}>
+              <span className={Number(d11) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d11}</span>
+              </span>
+            </span>
+          </div>
+
+          <div className={styles.digit_group}>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d12) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d12}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d13) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d13}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d14) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d14}</span>
+              </span>
+            </span>
+            <span className={styles.change_digit_container}>
+              <span className={Number(d15) < 10 ? styles.change_digit : ""}>
+                *<span className={styles.change_digit_child}>{d15}</span>
+              </span>
+            </span>
+          </div>
         </div>
 
         <input
@@ -160,7 +266,7 @@ fetch("https://2vg3p6.api.infobip.com/sms/2/text/advanced", requestOptions)
           placeholder="Digite um valor"
         />
 
-        <button onClick={enviar} >Cadastrar cartão</button>
+        <button onClick={enviar}>Cadastrar cartão</button>
       </main>
     </>
   );
